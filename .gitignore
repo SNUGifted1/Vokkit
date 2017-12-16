@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 public/assets/vanilla
 
+# for Mac
+.DS_Store
+
 # Runtime data
 pids
 *.pid
