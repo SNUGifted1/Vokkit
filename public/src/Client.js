@@ -17,8 +17,6 @@ class Client {
     this.socket = io()
   }
   loginInit () {
-    this.pluginManager = new PluginManager()
-    this.pluginManager.load()
     this.loginManager = new LoginManager(this)
     this.blockTextureManager = new BlockTextureManager()
     this.moveManager = new MoveManager()
@@ -29,6 +27,8 @@ class Client {
     this.inputManager = new InputManager()
     this.chatManager = new ChatManager()
     this.screenManager.addScreen('LoginScreen')
+    this.pluginManager = new PluginManager()
+    this.pluginManager.load()
   }
   init () {
     // moveManager.init()
