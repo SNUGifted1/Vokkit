@@ -29,7 +29,7 @@ class Server {
     })
 
     Logger.info('월드를 생성하는 중...')
-    worldGenerator = new WorldGenerator(200, 200)
+    worldGenerator = new WorldGenerator(10, 10)
     worldGenerator.generate().then(() => {
       Logger.info('월드를 불러오는 중...')
       this.worldList = World.loadAllWorlds()
@@ -39,6 +39,7 @@ class Server {
       socketConnectManager = new SocketConnectManager()
       socketConnectManager.init()
       Logger.info('통신 기능을 불러왔습니다.')
+      this.app = app
 
       pluginManager = new PluginManager()
       pluginManager.init()
