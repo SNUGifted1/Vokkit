@@ -85,6 +85,38 @@ input:hover {
   box-shadow: 0px 2px #131313;
 }
 
+.background-panel {
+  padding: 0.6vw;
+  border: 0.6vw solid transparent;
+  border-image: url('assets/gui/background_panel.png') 4 fill stretch;
+  position: absolute;
+
+  outline: none;
+}
+
+.item-cell {
+  background-image: url('assets/gui/item_cell.png');
+  background-repeat: no-repeat;
+  background-size: 3.6vw 3.6vw;
+
+  width: 3.2vw;
+  height: 3.2vw;
+  padding: 0.2vw 0.2vw;
+
+  outline: none;
+}
+
+.item-cell:hover {
+  background-image: url('assets/gui/item_cell_hover.png')
+}
+
+.player-preview {
+  border: 0.2vw solid transparent;
+  border-image-source: url('assets/gui/item_cell.png');
+  border-image-slice: 1;
+  border-image-repeat: stretch;
+}
+
 .flat-button {
   background-color: #C6C6C6;
   color: #131313;

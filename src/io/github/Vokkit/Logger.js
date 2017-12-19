@@ -1,17 +1,14 @@
-let caller = require('caller-id')
+const caller = require('caller-id')
+const readline = require('readline')
 
-let getTime = function () {
-  let date = new Date()
-
+function getTime () {
+  const date = new Date()
   let hour = date.getHours()
   hour = (hour < 10 ? '0' : '') + hour
-
   let min = date.getMinutes()
   min = (min < 10 ? '0' : '') + min
-
   let sec = date.getSeconds()
   sec = (sec < 10 ? '0' : '') + sec
-
   return hour + ':' + min + ':' + sec
 }
 
