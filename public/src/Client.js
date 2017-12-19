@@ -2,8 +2,8 @@ const LoginManager = require('./client/LoginManager')
 const MoveManager = require('./entity/MoveManager')
 const WorldManager = require('./world/WorldManager')
 const PlayerManager = require('./entity/PlayerManager')
-const ScreenManager = require('./ui/ScreenManager')
-const InputManager = require('./ui/InputManager')
+const ScreenManager = require('./UI/ScreenManager')
+const InputManager = require('./UI/InputManager')
 const BlockTextureManager = require('./block/BlockTextureManager')
 const ChatManager = require('./chat/ChatManager')
 const PluginManager = require('./plugin/PluginManager')
@@ -17,8 +17,6 @@ class Client {
     this.socket = io()
   }
   loginInit () {
-    this.pluginManager = new PluginManager()
-    this.pluginManager.load()
     this.loginManager = new LoginManager(this)
     this.blockTextureManager = new BlockTextureManager()
     this.moveManager = new MoveManager()
@@ -29,6 +27,8 @@ class Client {
     this.inputManager = new InputManager()
     this.chatManager = new ChatManager()
     this.screenManager.addScreen('LoginScreen')
+    this.pluginManager = new PluginManager()
+    this.pluginManager.load()
   }
   init () {
     // moveManager.init()

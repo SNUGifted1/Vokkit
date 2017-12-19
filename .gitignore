@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 public/assets/vanilla
 
+# for Mac
+.DS_Store
+
 # Runtime data
 pids
 *.pid
@@ -62,7 +65,5 @@ typings/
 *.bak
 
 # Private files
-worlds
-plugins
 public/dist
 jsconfig.json

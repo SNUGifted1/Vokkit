@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "lint": "standard",
-    "lint-fix": "standard --fix"
+    "lint-fix": "standard --fix",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

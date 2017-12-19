@@ -29,7 +29,7 @@ class Server {
     })
 
     Logger.info('월드를 생성하는 중...')
-    worldGenerator = new WorldGenerator(100, 100)
+    worldGenerator = new WorldGenerator(10, 10)
     await worldGenerator.generate()
 
     Logger.info('월드를 불러오는 중...')
