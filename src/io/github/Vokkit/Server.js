@@ -41,6 +41,7 @@ class Server {
     socketConnectManager.init()
     Logger.info('통신 기능을 불러왔습니다.')
 
+    this.app = app
     pluginManager = new PluginManager()
     pluginManager.init()
     pluginManager.loadPlugins()

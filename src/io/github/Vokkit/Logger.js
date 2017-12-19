@@ -12,8 +12,6 @@ function getTime () {
   return hour + ':' + min + ':' + sec
 }
 
-const readline = require('readline')
-
 class Logger {
 }
 
