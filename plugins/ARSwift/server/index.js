@@ -14,7 +14,7 @@ class Main extends PluginBase {
         } else if (!Array.isArray(data[i])) {
           continue
         }
-        newData[count + ''] = data[i]
+        newData[count + ''] = {x: data[i][0], y: data[i][1], z: data[i][2], id: data[i][3]}
         count++
       }
       const result = JSON.stringify(newData)
